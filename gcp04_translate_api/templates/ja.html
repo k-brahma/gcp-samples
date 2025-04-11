@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP翻訳APIサンプル</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fff8dc;
+            padding: 10px;
+            border-left: 4px solid #ffd700;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>GCP翻訳APIサンプル</h1>
+
+    <h2>概要</h2>
+    <p>このプロジェクトは、Google Cloud Platform（GCP）の翻訳APIを使用して、日本語のテキストを英語に翻訳するサンプルアプリケーションです。</p>
+
+    <h2>機能</h2>
+    <ul>
+        <li>日本語テキストファイルを英語に翻訳</li>
+        <li>HTML形式の保持</li>
+        <li>翻訳結果の自動保存</li>
+    </ul>
+
+    <h2>必要条件</h2>
+    <ul>
+        <li>Python 3.6以上</li>
+        <li>GCPアカウントとプロジェクト</li>
+        <li>有効なAPIキー</li>
+    </ul>
+
+    <h2>セットアップ</h2>
+    <ol>
+        <li>
+            <p>このリポジトリをクローンする</p>
+            <pre><code>git clone &lt;repository-url&gt;</code></pre>
+        </li>
+        <li>
+            <p>必要なパッケージをインストール</p>
+            <pre><code>pip install -r requirements.txt</code></pre>
+        </li>
+        <li>
+            <p><code>.env</code>ファイルを作成し、以下の内容を追加</p>
+            <pre><code>GOOGLE_CLOUD_PROJECT_API_KEY=あなたのGCP_APIキー</code></pre>
+        </li>
+    </ol>
+
+    <h2>使用方法</h2>
+    <ol>
+        <li><p><code>templates/ja.txt</code>ファイルに翻訳したい日本語テキストを記入します。</p></li>
+        <li>
+            <p>スクリプトを実行します。</p>
+            <pre><code>python ja_to_en.py</code></pre>
+        </li>
+        <li><p>翻訳結果は<code>results/en.txt</code>に保存されます。</p></li>
+    </ol>
+
+    <h2>注意事項</h2>
+    <ul>
+        <li>APIキーは公開しないでください</li>
+        <li>GCPの無料枠を超えると料金が発生します</li>
+        <li>大量のテキストを翻訳する場合は、GCPの利用制限を確認してください</li>
+    </ul>
+
+    <h2>ライセンス</h2>
+    <p>MITライセンス</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Route on Google Maps</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key={api_key}&callback=initMap&libraries=&v=weekly" async></script>
+    <style>
+        #map {{
+            height: 400px;
+            width: 100%;
+        }}
+        #directionsPanel {{
+            height: 400px;
+            overflow: auto;
+        }}
+    </style>
+    <script>
+        function initMap() {{
+            var directionsService = new google.maps.DirectionsService();
+            var directionsRenderer = new google.maps.DirectionsRenderer();
+            var map = new google.maps.Map(document.getElementById('map'), {{
+                zoom: 7,
+                center: {{lat: 35.681236, lng: 139.767125}} // 東京
+            }});
+            directionsRenderer.setMap(map);
+            directionsRenderer.setPanel(document.getElementById('directionsPanel'));
+
+            var request = {{
+                origin: '{origin}',
+                destination: '{destination}',
+                waypoints: [
+                    {{location: '{waypoint1}'}},
+                    {{location: '{waypoint2}'}},
+                    {{location: '{waypoint3}'}},
+                    {{location: '{waypoint4}'}}
+                ],
+                optimizeWaypoints: true,
+                travelMode: 'DRIVING'
+            }};
+            directionsService.route(request, function(result, status) {{
+                if (status === 'OK') {{
+                    directionsRenderer.setDirections(result);
+                }}
+            }});
+        }}
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="directionsPanel"></div>
+</body>
+</html>
