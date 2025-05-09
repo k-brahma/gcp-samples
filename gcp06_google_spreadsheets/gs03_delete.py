@@ -1,4 +1,3 @@
-import json
 import os
 from pathlib import Path
 
@@ -13,13 +12,14 @@ load_dotenv(dotenv_path=dotenv_path)
 SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
 CREDENTIALS_FILE = Path(__file__).parent / 'credentials.json'
 
-def main():
-    SCOPES = ['https://www.googleapis.com/auth/spreadsheets'] # スプレッドシートの操作なので drive.readonly は不要
+
+def delete_target_sheet():
+    SCOPES = ['https://www.googleapis.com/auth/spreadsheets']  # スプレッドシートの操作なので drive.readonly は不要
     credentials = Credentials.from_service_account_file(CREDENTIALS_FILE, scopes=SCOPES)
     gc = gspread.authorize(credentials)
-    
+
     print("認証成功。スプレッドシートを開こうとしています...")
-    
+
     spreadsheet = gc.open_by_key(SPREADSHEET_ID)
     print(f"スプレッドシートのタイトル: {spreadsheet.title}")
     print("スプレッドシートへのアクセスに成功しました！")
@@ -31,7 +31,7 @@ def main():
         print(f"- {worksheet.title}")
 
     # 削除するシート名を設定
-    sheet_to_delete_name = "新しいシート" # ここで削除したいシート名を指定
+    sheet_to_delete_name = "新しいシート"  # ここで削除したいシート名を指定
 
     print(f"\nシート '{sheet_to_delete_name}' の削除を試みます...")
     try:
@@ -54,4 +54,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main() 
+    delete_target_sheet()
