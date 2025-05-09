@@ -1,6 +1,6 @@
 # GCP テキスト読み上げAPI サンプル
 
-このディレクトリには、Google Cloud Platform (GCP) の Text-to-Speech API を使用した簡単なサンプルアプリケーションが含まれています。
+このディレクトリには、Google Cloud Platform (GCP) の Cloud Text-to-Speech API を使用した簡単なサンプルアプリケーションが含まれています。
 
 ## 機能
 

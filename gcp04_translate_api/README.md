@@ -1,6 +1,6 @@
 # GCP 翻訳API サンプル
 
-このディレクトリには、Google Cloud Platform (GCP) の Translation API を使用した翻訳サンプルアプリケーションが含まれています。
+このディレクトリには、Google Cloud Platform (GCP) の Cloud Translation API を使用した翻訳サンプルアプリケーションが含まれています。
 
 ## 機能
 

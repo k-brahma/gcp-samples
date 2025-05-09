@@ -4,9 +4,9 @@
 
 ## 機能
 
-- Google Maps Directions API を使用した経路検索と表示
+- Directions API を使用した経路検索と表示
 - 複数の経由地点を含む最適化された経路計算
-- HTML と JavaScript を使用した経路の視覚的表示
+- Maps JavaScript API を使用した HTML と JavaScript を使用した経路の視覚的表示
 - ブラウザでの地図表示とルート案内
 - URL 生成やテンプレートベースのアプローチなど、様々な実装方法
 
