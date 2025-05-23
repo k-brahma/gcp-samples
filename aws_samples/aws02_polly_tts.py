@@ -13,10 +13,6 @@ Amazon Polly を使用したテキスト読み上げサンプル
 
 * polly:SynthesizeSpeech
 * polly:DescribeVoices
-
-面倒ならば、Amazon Polly のデフォルトのポリシーを使用してください。
-
-* AmazonPollyFullAccess
 """
 
 import os

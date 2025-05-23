@@ -13,9 +13,6 @@ Amazon Translate を使用した翻訳サンプル
 
 * translate:TranslateText
 * translate:DetectDominantLanguage
-
-:author: AWS Samples
-:version: 1.0
 """
 
 import os
