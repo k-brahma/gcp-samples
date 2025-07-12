@@ -128,7 +128,7 @@ AWS には様々なサービスがあります。
 
 ユーザの詳細画面でユーザ名を設定しましょう。
 
-### 2.4 IAM で作ったユーザに permission を割り当てる
+### 2.4 IAM で作ったユーザにポリシーを割り当てる
 
 AWS Translation を使うために、今作った IAM ユーザに「TranslateFullAccess」の権限を割り当てます。
 
